@@ -12,6 +12,7 @@ const MainLayout = ({ children }) => {
     <>
     <ToastContainer />
       <Head>
+        <link rel="icon" href={'media/favicon.ico'} type="image/x-icon"></link>
         <title>Cosmo - Beer Project</title>
       </Head>
       <div>
