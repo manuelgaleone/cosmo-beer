@@ -1,0 +1,275 @@
+/* IMPORT FONTS AND SETTINGS */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
+html,
+body {
+  font-family: "Noto Sans", sans-serif;
+}
+
+.bebas-regular {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+h1 {
+    font-size: 48px !important;
+}
+
+h2 {
+    font-size: 36px !important;
+}
+
+h3 {
+    font-size: 20px !important;
+}
+
+h6 {
+    font-size: 13px !important;
+}
+
+p {
+    font-size: 16px !important;
+}
+
+button {
+    font-size: 16px !important;
+}
+
+/* VARIABLES */
+:root {
+  --color-accent: #e7ab25;
+  --color-accent-light: #f3e3c1;
+  --color-accent-super-light: #fef7e6;
+  --color-blue: #01262f;
+  --color-blue-light: #77a3d2;
+  --color-base-dark: #000000;
+  --color-base-light: #fffbfb;
+  --color-alert-light: #fcedd3;
+  --color-alert: #ff9133;
+  --color-success: #4bda92;
+  --color-success-light: #d2ffea;
+  --color-gray-100: #f5f5fb;
+  --color-gray-300: #ababb1;
+  --color-gray-400: #8d8d93;
+  --color-gray-500: #7a7a81;
+  --color-brown: #6c4a00;
+}
+
+/* COLOR */
+
+.accent {
+  color: var(--color-accent) !important;
+}
+
+.accent-border {
+  border: var(--color-accent) !important;
+}
+
+.accent-light {
+  color: var(--color-accent-light);
+}
+
+.blue {
+  color: var(--color-blue);
+}
+
+.blue-light {
+  color: var(--color-blue-light);
+}
+
+.base-dark {
+  color: var(--color-base-dark);
+}
+
+.base-light {
+  color: var(--color-base-light);
+}
+
+.alert-light {
+  color: var(--color-alert-light);
+}
+
+.alert {
+  color: var(--color-alert) !important;
+}
+
+.success {
+  color: var(--color-success) !important;
+}
+
+.success-light {
+  color: var(--color-success-light);
+}
+
+.gray-300 {
+  color: var(--color-gray-300) !important;
+}
+
+.gray-400 {
+  color: var(--color-gray-400);
+}
+
+.gray-500 {
+  color: var(--color-gray-500);
+}
+
+.brown {
+  color: var(--color-brown) !important;
+}
+
+/* BACKGROUND COLOR */
+
+.back-accent {
+  background-color: var(--color-accent) !important;
+}
+
+.back-accent-light {
+  background-color: var(--color-accent-light) !important;
+}
+
+.back-accent-super-light {
+  background-color: var(--color-accent-super-light) !important;
+  z-index: -2;
+}
+
+.back-blue {
+  background-color: var(--color-blue) !important;
+}
+
+.back-blue-light {
+  background-color: var(--color-blue-light) !important;
+}
+
+.back-base-dark {
+  background-color: var(--color-base-dark) !important;
+}
+
+.back-base-light {
+  background-color: var(--color-base-light) !important;
+}
+
+.back-alert-light {
+  background-color: var(--color-alert-light) !important;
+}
+
+.back-alert {
+  background-color: var(--color-alert) !important;
+}
+
+.back-success {
+  background-color: var(--color-success) !important;
+}
+
+.back-success-light {
+  background-color: var(--color-success-light) !important;
+}
+
+.back-gray-300 {
+  background-color: var(--color-gray-300) !important;
+}
+
+.back-gray-400 {
+  background-color: var(--color-gray-400) !important;
+}
+
+.back-brown {
+  background-color: var(--color-brown) !important;
+}
+
+/* GENERAL */
+
+.body-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.content {
+  flex: 1;
+}
+
+.back-beer-1 {
+  background-image: url("../public/media/back-beer-login.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.input-text-container {
+  margin-bottom: 1rem;
+}
+
+.input-text-container label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #333;
+  font-size: 12px;
+}
+
+.input-text-container input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #aaa; 
+  border-radius: 2px; 
+  font-size: 12px;
+  background-color: transparent;
+}
+
+.input-text-container input::placeholder {
+  color: #888;
+}
+
+.input-text-container input:focus {
+  outline: none;
+  border-color: #666;
+}
+
+.login-content {
+    margin: auto;
+}
+
+/* Extra Extra Small (xxs) */
+@media (min-width: 0px) {
+  /* Inserisci le regole CSS per xx-small */
+}
+
+/* Extra Small (xs) */
+@media (min-width: 576px) {
+  /* Inserisci le regole CSS per x-small */
+  .beer-login-title {
+    width: 300px;
+  }
+}
+
+/* Small (sm) */
+@media (min-width: 768px) {
+  /* Inserisci le regole CSS per small */
+}
+
+/* Medium (md) */
+@media (min-width: 992px) {
+  /* Inserisci le regole CSS per medium */
+}
+
+/* Large (lg) */
+@media (min-width: 1200px) {
+  /* Inserisci le regole CSS per large */
+  .beer-login-title {
+    width: 500px;
+  }
+}
+
+/* Extra Large (xl) */
+@media (min-width: 1400px) {
+  /* Inserisci le regole CSS per x-large */
+}
+
+/* Extra Extra Large (xxl) */
+@media (min-width: 1600px) {
+  /* Inserisci le regole CSS per xx-large */
+}
