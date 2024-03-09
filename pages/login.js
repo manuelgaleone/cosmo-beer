@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Row, Container, Button } from "react-bootstrap"
+import { Row, Button, Form } from "react-bootstrap"
 
 import beerTitle from '../public/media/title-login.svg'
 import cosmoAccent from '../public/media/cosmo-yellow.svg'
@@ -21,18 +21,20 @@ const Login = () => {
   }
 
   return (
-    <div className='vh-100 row'>
+    <Row className='vh-100 m-0 p-0'>
       <div className='col-12 col-lg-8 m-0 back-beer-1 p-3 d-none d-lg-flex justify-content-center'>
-          <Image
-            src={beerTitle}
-            className='beer-login-title img-fluid'
-          />
-        </div>
-        <div className='col-12 col-lg-4 m-0 back-accent-super-light d-flex flex-column justify-content-between align-items-center py-5'>
-          <div className='col-8 login-content p-0 m-0'>
-            <h6 className='accent pb-5 p-0 m-0 text-end'>TI DEVO UNA BIRRA</h6>
-            <h2 className='bebas-regular pt-3 m-0'>LOGIN</h2>
-            <div className='login-form-container d-flex flex-column'>
+        <Image
+          src={beerTitle}
+          alt='Beer title'
+          className='beer-login-title img-fluid'
+        />
+      </div>
+      <div className='col-12 col-lg-4 m-0 back-accent-super-light d-flex flex-column justify-content-between align-items-center py-5'>
+        <div className='col-8 login-content p-0 m-0'>
+          <h6 className='accent pb-5 p-0 m-0 text-end'>TI DEVO UNA BIRRA</h6>
+          <h2 className='bebas-regular pt-3 m-0'>LOGIN</h2>
+          <div>
+            <Form className='login-form-container d-flex flex-column'>
               <InputText
                 label="Email"
                 id="email"
@@ -51,23 +53,19 @@ const Login = () => {
               />
               <h6 className='text-end blue-light p-0 m-0 pb-3'>Password dimenticata</h6>
               <Button className="back-accent accent-super-light border border-none">LOG IN</Button>
-              <h6 className='text-center p-0 m-0 py-3'>Non hai un Account? <span className='blue-light p-0 m-0'>Registrati</span></h6>
-            </div>
+            </Form>
+            <h6 className='text-center p-0 m-0 py-3'>Non hai un Account? <span className='blue-light p-0 m-0'>Registrati</span></h6>
           </div>
-          <div className='col-12 login-footer d-flex align-items-center justify-content-center gap-2'>
-              <h6 className='accent p-0 m-0'>Questa birra è offerta da</h6>
-              <Image
-              src={cosmoAccent}
-              />
-            </div>
         </div>
-        <div className='col-12 col-lg-8 m-0 back-beer-1 p-3 d-flex d-lg-none justify-content-center'>
-          <Image
-            src={beerTitle}
-            className='beer-login-title img-fluid'
-          />
-        </div>
-    </div>
+        <div className='col-12 login-footer d-flex align-items-center justify-content-center gap-2'>
+            <h6 className='accent p-0 m-0'>Questa birra è offerta da</h6>
+            <Image
+            alt='Cosmo logo'
+            src={cosmoAccent}
+            />
+          </div>
+      </div>
+    </Row>
   );
 };
 

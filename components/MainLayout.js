@@ -14,8 +14,8 @@ const MainLayout = ({ children }) => {
       <Head>
         <title>Cosmo - Beer Project</title>
       </Head>
-      <div className='body-container'>
-        <main className='content'>{children}</main>
+      <div>
+        <main>{children}</main>
       </div>
     </>
   );
