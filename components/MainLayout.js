@@ -20,7 +20,7 @@ const MainLayout = ({ children }) => {
     if (!isAuth && protectedRoutes.includes(router.pathname)) {
       router.replace('/login');
     } else if (isAuth && nonAccessibleRoutes.includes(router.pathname)) {
-      router.replace('/user');
+      router.replace('/challenge');
     }
 
   }, [router.pathname]);

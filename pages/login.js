@@ -25,7 +25,7 @@ const Login = () => {
       const user = users.find(user => user.email === email && user.password === password);
 
       if (user) {
-        router.replace('/user')
+        router.replace('/challenge')
         dispatch(setIsAuth(true))
         localStorage.setItem('isAuth', true)
         toast.success("Login effettuato con successo!", {
