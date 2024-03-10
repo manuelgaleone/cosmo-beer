@@ -135,7 +135,6 @@ button {
 
 .back-accent-super-light {
   background-color: var(--color-accent-super-light) !important;
-  z-index: -2;
 }
 
 .back-blue {
@@ -241,9 +240,6 @@ button {
 /* Extra Small (xs) */
 @media (min-width: 576px) {
   /* Inserisci le regole CSS per x-small */
-  .beer-login-title {
-    width: 300px;
-  }
 }
 
 /* Small (sm) */
@@ -259,9 +255,6 @@ button {
 /* Large (lg) */
 @media (min-width: 1200px) {
   /* Inserisci le regole CSS per large */
-  .beer-login-title {
-    width: 500px;
-  }
 }
 
 /* Extra Large (xl) */
