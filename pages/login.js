@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Row, Button, Form } from "react-bootstrap"
 
 import beerTitle from '../public/media/title-login.svg'
@@ -6,15 +6,47 @@ import cosmoAccent from '../public/media/cosmo-yellow.svg'
 
 import Image from 'next/image';
 import InputText from '../components/Input';
+import { useDispatch, useSelector } from 'react-redux';
+import { useRouter } from 'next/router';
+import { toast } from 'react-toastify';
+import { setIsAuth } from '../redux/actions/userActions';
 
 const Login = () => {
+  const router = useRouter();
+  const dispatch = useDispatch()
+
+  const users = useSelector(state => state.user.users);
 
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
 
   const handleLogin = async () => {
     try {
+      const user = users.find(user => user.email === email && user.password === password);
 
+      if (user) {
+        router.replace('/user')
+        dispatch(setIsAuth(true))
+        localStorage.setItem('isAuth', true)
+        toast.success("Login effettuato con successo!", {
+          position: "bottom-center",
+          autoClose: 3000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          theme: 'light'
+        });
+      } else {
+        toast.error("Errore durante il login..", {
+          position: "bottom-center",
+          autoClose: 3000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          theme: 'light'
+        });
+      }
+      
       console.log(email, password)
 
     } catch (err) { console.log(err) }
@@ -52,7 +84,7 @@ const Login = () => {
                 placeholder="Password"
               />
               <h6 className='text-end blue-light p-0 m-0 pb-3'>Password dimenticata</h6>
-              <Button className="back-accent accent-super-light border border-none">LOG IN</Button>
+              <Button onClick={handleLogin} className="back-accent accent-super-light border border-none">LOG IN</Button>
             </Form>
             <h6 className='text-center p-0 m-0 py-3'>Non hai un Account? <span className='blue-light p-0 m-0'>Registrati</span></h6>
           </div>

@@ -199,6 +199,12 @@ button {
   background-size: cover;
 }
 
+.back-beer-2 {
+  background-image: url("../public/media/beer-back.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .input-text-container {
   margin-bottom: 1rem;
 }
@@ -230,6 +236,10 @@ button {
 
 .login-content {
     margin: auto;
+}
+
+.basic-link {
+  text-decoration: none;
 }
 
 /* Extra Extra Small (xxs) */

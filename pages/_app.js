@@ -8,7 +8,6 @@ import { store, persistor } from '../redux/store';
 import '../styles/global.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'react-toastify/dist/ReactToastify.css';
-import AuthGuard from '../utils/authGuard';
 
 function MyApp({ Component, pageProps }) {
 
@@ -16,9 +15,7 @@ function MyApp({ Component, pageProps }) {
   <Provider store={store}>
     <PersistGate loading={null} persistor={persistor}>
       <MainLayout>
-        <AuthGuard>
-            <Component {...pageProps} />
-        </AuthGuard>
+        <Component {...pageProps} />
       </MainLayout>
     </PersistGate>
   </Provider>
