@@ -32,8 +32,8 @@ const MainLayout = ({ children }) => {
         <link rel="icon" href={'media/favicon.ico'} type="image/x-icon"></link>
         <title>Cosmo - Beer Project</title>
       </Head>
-      <div>
-        <main>{children}</main>
+      <div /* className='body-container' */>
+        <main /* className='content' */>{children}</main>
       </div>
     </>
   );

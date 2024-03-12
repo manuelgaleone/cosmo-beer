@@ -86,7 +86,7 @@ const Home = () => {
   }, []);
 
   return (
-    <Row className='vh-100 flex-column justify-content-between align-items-center py-5'>
+    <Row className='flex-column justify-content-between align-items-center'>
       <video 
         autoPlay 
         loop 

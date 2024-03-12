@@ -12,8 +12,8 @@ const Challenge = () => {
   const router = useRouter();
 
   return (
-    <Row className='vh-100'>
-      <div className='col-12 col-lg-3 m-0 back-accent-super-light p-3 d-flex justify-content-center'>
+    <Row className='vh-100 back-wave-1'>
+      <div className='col-12 col-lg-3 m-0 p-3 d-flex justify-content-center'>
           
       </div>
     </Row>

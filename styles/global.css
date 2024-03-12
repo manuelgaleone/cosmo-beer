@@ -205,6 +205,13 @@ button {
   background-size: cover;
 }
 
+.back-wave-1 {
+  background-image: url("../public/media/wave-back.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
 .input-text-container {
   margin-bottom: 1rem;
 }
