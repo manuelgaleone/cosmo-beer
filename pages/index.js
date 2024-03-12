@@ -33,8 +33,8 @@ const Home = () => {
         tension: 1,
         close: true,
         range: {
-          x: 100,
-          y: 40
+          x: 60,
+          y: 30
         },
         axis: ['x', 'y']
       };
