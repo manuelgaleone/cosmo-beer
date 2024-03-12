@@ -242,6 +242,28 @@ button {
   text-decoration: none;
 }
 
+.video-bg-welcome {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+  padding: 0;
+  margin: 0;
+}
+
+.video-overlay {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(105, 78, 0, .4);
+  z-index: -1;
+}
+
 /* Extra Extra Small (xxs) */
 @media (min-width: 0px) {
   /* Inserisci le regole CSS per xx-small */

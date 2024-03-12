@@ -5,11 +5,9 @@ import beerTitle from '../public/media/tidevounabirra-accent-light.svg'
 import cosmoWhite from '../public/media/cosmo-white.svg'
 
 import Image from 'next/image';
-import InputText from '../components/Input';
-import { useDispatch, useSelector } from 'react-redux';
+
+import { useDispatch } from 'react-redux';
 import { useRouter } from 'next/router';
-import { toast } from 'react-toastify';
-import { setIsAuth } from '../redux/actions/userActions';
 import Link from 'next/link';
 import { gsap } from 'gsap';
 
@@ -36,7 +34,18 @@ const Home = () => {
   }, []);
 
   return (
-    <Row className='vh-100 back-beer-2 flex-column justify-content-between align-items-center py-5'>
+    <Row className='vh-100 flex-column justify-content-between align-items-center py-5'>
+      <video 
+        autoPlay 
+        loop 
+        muted 
+        className="video-bg-welcome"
+      >
+        <source src="/media/video_birra_compresso.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <div className='video-overlay'>
+      </div>
       <div className='col-12 m-0 p-3 d-flex justify-content-center'>
           <Image
             src={cosmoWhite}
