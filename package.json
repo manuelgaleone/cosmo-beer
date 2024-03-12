@@ -12,6 +12,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@georgedoescode/generative-utils": "^1.0.38",
     "@reduxjs/toolkit": "^1.9.5",
     "axios": "^1.4.0",
     "boostrap": "^2.0.0",
