@@ -22,11 +22,6 @@ const Home = () => {
   const dispatch = useDispatch()
 
   useEffect(() => {
-    const svg = document.querySelector('#liquid-effect-svg');
-    if (!svg) return;
-
-    const paths = svg.querySelectorAll('path');
-
     const applyLiquidEffectToPath = (path) => {
       const options = {
         detail: 32,
@@ -78,9 +73,16 @@ const Home = () => {
         });
       });
     };
-
-    paths.forEach(applyLiquidEffectToPath);
-
+    
+    const svgs = document.querySelectorAll('#liquid-effect-svg, #liquid-effect-svg-mobile');
+  
+    svgs.forEach(svg => {
+      // Per ogni SVG, seleziona tutti i percorsi al suo interno
+      const paths = svg.querySelectorAll('path');
+      
+      // Applica l'effetto a ciascun percorso trovato
+      paths.forEach(applyLiquidEffectToPath);
+    });
   }, []);
 
   return (
